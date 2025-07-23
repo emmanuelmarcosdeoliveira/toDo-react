@@ -24,6 +24,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.36.0",
     "ultracite": "5.0.32",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }
