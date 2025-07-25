@@ -23,16 +23,16 @@ export default function TaskItem({task, loading}:TaskItemProps) {
 	const [isEditing, setIsEditing] = React.useState(task.state === TaskState.Creating);
 
    const [taskTitle, setTaskTitle] = React.useState(task.title || "")
-   const {updateTask, updateTaskStatus, deleteTask} = useTask()
+   const {updateTask, updateTaskStatus, deleteTask, isDeletingTask, isUpdateTask} = useTask()
 
    function handleChangeTaskTitle(event: React.ChangeEvent<HTMLInputElement>) {
     setTaskTitle(event.target.value || "")
     
    }
    
-   function handleSaveTask(event: React.FormEvent<HTMLFormElement>) {
+   async function handleSaveTask(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    updateTask(task.id, {title: taskTitle} )
+    await updateTask(task.id, {title: taskTitle} )
     setIsEditing(false)
    }
 
@@ -51,8 +51,8 @@ export default function TaskItem({task, loading}:TaskItemProps) {
     updateTaskStatus(task.id, checked )
   }
 
-  function handleDeleteTask() {
-    deleteTask(task.id)
+  async function handleDeleteTask() {
+    await deleteTask(task.id)
   }
 
 
@@ -64,7 +64,7 @@ export default function TaskItem({task, loading}:TaskItemProps) {
 				<InputText value={taskTitle}  className="flex-1" required autoFocus onChange={handleChangeTaskTitle} />
 				<div className="flex gap-1"> 
         <ButtonIcon type="button" onClick={handleExitEditTask}  icon={XIcon} variant="secondary" /> 
-        <ButtonIcon type="submit" icon={CheckIcon} variant="primary" />
+        <ButtonIcon type="submit" icon={CheckIcon} variant="primary" handling={isUpdateTask} />
 				</div>
         </form>
 			)
@@ -80,7 +80,7 @@ export default function TaskItem({task, loading}:TaskItemProps) {
           <Skeleton className="flex-1 h-6" /> 
           }
 					<div className="flex gap-1">
-					<ButtonIcon loading={loading} onClick={handleDeleteTask}   icon={TrashIcon} variant="tertiary" />
+					<ButtonIcon   loading={loading} onClick={handleDeleteTask}   icon={TrashIcon} variant="tertiary"  handling={isDeletingTask}/>
 					<ButtonIcon loading={loading}  onClick={handleEditTask}  icon={PencilIcon} variant="tertiary" />
 	        </div>
 				</div>

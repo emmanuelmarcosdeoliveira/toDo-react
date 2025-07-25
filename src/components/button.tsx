@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import type React from "react";
+import SpinnerIcon from "../assets/icons/spinner.svg?react";
 import Icon from "./icon";
 import Text from "./Text";
 
@@ -19,11 +20,15 @@ export const buttonVariants = cva(
 			disabled: {
 				true: "pointer-events-none opacity-50",
 			},
+      handling: {
+        true:  "pointer-events-none" 
+      }
 		},
 		defaultVariants: {
 			variant: "primary",
 			size: "md",
 			disabled: false,
+      handling: false
 		},
 	}
 );
@@ -58,6 +63,7 @@ interface ButtonProps
 	extends Omit<React.ComponentProps<"button">, "size" | "disabled">,
 		VariantProps<typeof buttonVariants> {
 	icon?: React.ComponentProps<typeof Icon>["svg"];
+  handling?: boolean
 }
 
 export default function Button({
@@ -65,19 +71,21 @@ export default function Button({
 	size,
 	disabled,
 	className,
+  handling,
 	children,
-	icon: IconComponent,
+	icon,
 	...props
 }: ButtonProps) {
 	return (
 		<button
-			className={buttonVariants({ variant, size, disabled, className })}
+			className={buttonVariants({ variant, size, disabled, handling, className })}
 			{...props}
 		>
-			{IconComponent && (
+			{icon && (
 				<Icon
 					className={buttonIconVariants({ variant, size })}
-					svg={IconComponent}
+					animate={handling}
+          svg={handling ? SpinnerIcon :  icon}
 				/>
 			)}
 			<Text className={buttonTextVariants({ variant })} variant="body-md-bold">
