@@ -26,7 +26,8 @@ export default function UseTasks() {
   return {
     tasks,
     createdTasksCount: tasks.filter((task) => task.state === TaskState.Created ).length, 
-    concludeTasksCount: tasks.filter((task) => task.conclude).length
+    concludeTasksCount: tasks.filter((task) => task.conclude).length,
+    isLoadingTask
   } 
 
 }
