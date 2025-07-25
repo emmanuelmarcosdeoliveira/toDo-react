@@ -7,7 +7,7 @@ export const inputTextVariants = cva(
 	{
 		variants: {
 			size: {
-				md: "px-2 pb-2",
+				md: "px-2",
 			},
 			disabled: {
 				true: "pointer-events-none",
