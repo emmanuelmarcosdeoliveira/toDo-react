@@ -1,8 +1,9 @@
 {
   "name": "todo-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Emmanuel Oliveira | OFS",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,7 +14,11 @@
     "class-variance-authority": "^0.7.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11"
+    "react-loader-spinner": "^6.1.6",
+    "react-router": "^7.7.0",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.1.11",
+    "use-local-storage": "^3.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
@@ -24,6 +29,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.36.0",
     "ultracite": "5.0.32",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }

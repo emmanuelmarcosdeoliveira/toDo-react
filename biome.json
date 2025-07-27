@@ -18,6 +18,7 @@
       "recommended": true
     }
   },
+
   "javascript": {
     "formatter": {
       "quoteStyle": "double"
@@ -31,7 +32,6 @@
       }
     }
   },
-  "extends": [
-    "ultracite"
-  ]
+
+  "extends": ["ultracite"]
 }
