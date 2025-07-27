@@ -1,4 +1,8 @@
-<h1 align="center">ToDo List React</h1>
+<div align="center">
+
+# ToDo List React
+
+</div>
 
 <p align="center">
   <a href="#tecnologias"><img src="https://img.shields.io/badge/React-19.1.0-61dafb?style=plastic&logo=react" alt="React"/></a>
@@ -21,7 +25,6 @@
 ---
 
 <p align="center">
-  <a href="#menu"><img src="https://img.shields.io/badge/-Menu-555?style=plastic&logo=about-dot-me"/></a>
   <a href="#tecnologias"><img src="https://img.shields.io/badge/-Tecnologias-555?style=plastic&logo=code"/></a>
   <a href="#padroes"><img src="https://img.shields.io/badge/-Padr%C3%B5es-555?style=plastic&logo=vercel"/></a>
   <a href="#setup"><img src="https://img.shields.io/badge/-Setup-555?style=plastic&logo=terminal"/></a>
@@ -164,4 +167,10 @@ Released in 2025 This project is under the **MIT license**<br>
   Projeto criado pela <a href="https://www.rocketseat.com.br/" target="_blank">Rocketseat </a>e desenvolvido por Emmanuel Oliveira,<br> agradeço pelo incentivo e base de aprendizado.
 </p>
 <strong>⭐ Se este projeto foi útil para você, considere dar uma estrela!</strong>
+
+</br>
+</br>
+
+[`voltar ao topo`](#todo-list-react)
+
 </div>
