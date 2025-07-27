@@ -31,7 +31,7 @@
   <a href="#contribuicao"><img src="https://img.shields.io/badge/-Contribui%C3%A7%C3%A3o-555?style=plastic&logo=github"/></a>
   <a href="#contato"><img src="https://img.shields.io/badge/-Contato-555?style=plastic&logo=gmail"/></a>
   <a href="https://github.com/emmanuelmarcosdeoliveira/toDo-react/fork"><img src="https://img.shields.io/badge/Fork%20Project-Fork-6e5494?style=plastic&logo=github" alt="Fork"></a>
-  <a href="https://github.com/emmanuelmarcosdeoliveira/toDo-react/stargazers"><img src="https://img.shields.io/github/stars/oliveiraemmanuel/toDo-React?style=plastic&logo=github" alt="GitHub Stars"></a>
+  <a href="https://github.com/emmanuelmarcosdeoliveira/toDo-react/stargazers"><img src="https://img.shields.io/github/stars/emmanuelmarcosdeoliveira/toDo-React?style=plastic&logo=github" alt="GitHub Stars"></a>
   <a href="#versao-online"><img src="https://img.shields.io/badge/Vers%C3%A3o%20Online-Acessar-34D399?style=plastic&logo=vercel" alt="Versão Online"/></a>
 </p>
 
